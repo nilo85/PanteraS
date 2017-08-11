@@ -1,11 +1,11 @@
 version: '2'
 services:
   panteras:
-    image:      ${PANTERAS_DOCKER_IMAGE}
-    net:        host
-    privileged: true
-    pid:        host
-    restart:    "${PANTERAS_RESTART}"
+    image:          ${PANTERAS_DOCKER_IMAGE}
+    network_mode:   host
+    privileged:     true
+    pid:            host
+    restart:        "${PANTERAS_RESTART}"
     ${PORTS}
        ${CONSUL_UI_PORTS}
        ${MARATHON_PORTS}
